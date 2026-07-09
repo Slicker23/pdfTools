@@ -1,5 +1,5 @@
 import type { PdfEditBBox, PdfEditFont } from "../pdf/edit-model";
-import { looksGarbled } from "../pdf/edit-pickup";
+import { looksGarbled } from "../pdf/text-quality";
 
 export { looksGarbled };
 

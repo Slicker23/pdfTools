@@ -700,7 +700,7 @@ external: ["pdf-lib", "@pdf-lib/fontkit", "zod"]
 
 ## Development
 
-This package is developed in the [pdfFlow-Engine repository](https://github.com/ennkaos/pdfFlow-Engine) at `packages/pdfflow-engine/`. Source lives in `src/lib/pdf-engine/` at the repo root.
+This package is built from the standalone [pdfFlow-Engine](https://github.com/ennkaos/pdfFlow-Engine) repository. During local app development, source lives in `src/lib/pdf-engine/` and is bundled via this workspace package.
 
 ### Build from source
 

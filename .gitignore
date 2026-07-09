@@ -53,5 +53,8 @@ next-env.d.ts
 # npm package build output
 packages/*/dist/
 
+# standalone engine repo (separate git)
+/pdfFlow-Engine/
+
 # smoke output
 .pdf-engine-smoke-output.pdf
