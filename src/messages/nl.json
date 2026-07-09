@@ -1,0 +1,224 @@
+{
+  "common": {
+    "brand": "PdfFlow",
+    "tagline": "Private PDF tools. Files stay in your browser.",
+    "signIn": "Inloggen met Google",
+    "signOut": "Sign out",
+    "download": "Download",
+    "processing": "Processing...",
+    "selectFiles": "Select files",
+    "dropFiles": "Drop PDF files here or click to browse",
+    "freeDocsRemaining": "{count} free documents remaining",
+    "upgradeCta": "Unlock unlimited for €1",
+    "upgradeTitle": "Lifetime access for €1",
+    "upgradeDesc": "No subscription. Pay once, use forever.",
+    "privacyNote": "Your files are processed locally in your browser and never uploaded to our servers.",
+    "tools": "Tools",
+    "pricing": "Prijzen",
+    "blog": "Blog",
+    "dashboard": "Dashboard",
+    "privacy": "Privacy Policy",
+    "allTools": "All Tools",
+    "getStarted": "Get Started Free",
+    "learnMore": "Learn More"
+  },
+  "home": {
+    "hero": "Gratis privé PDF-tools",
+    "heroSub": "Merge, split, compress, convert — all in your browser. First 3 documents free, then €1 lifetime access.",
+    "features": "Why PdfFlow?",
+    "featurePrivacy": "100% Private",
+    "featurePrivacyDesc": "Files never leave your device for basic tools",
+    "featurePrice": "€1 Lifetime",
+    "featurePriceDesc": "No subscriptions, no hidden fees",
+    "featureEu": "EU-Friendly",
+    "featureEuDesc": "GDPR compliant, available in 8 languages"
+  },
+  "tools": {
+    "merge-pdf": {
+      "title": "Merge PDF",
+      "description": "Combine multiple PDF files into one document",
+      "howTo": "Select PDF files, drag to reorder, then click Merge"
+    },
+    "split-pdf": {
+      "title": "Split PDF",
+      "description": "Split a PDF into separate files by page ranges",
+      "howTo": "Enter page ranges like 1-3, 5, 7-10"
+    },
+    "extract-pdf": {
+      "title": "Extract Pages",
+      "description": "Extract specific pages from a PDF",
+      "howTo": "Enter page numbers separated by commas"
+    },
+    "rotate-pdf": {
+      "title": "Rotate PDF",
+      "description": "Rotate PDF pages 90°, 180°, or 270°",
+      "howTo": "Select rotation angle and optional page numbers"
+    },
+    "reorder-pdf": {
+      "title": "Reorder PDF Pages",
+      "description": "Change the order of pages in your PDF",
+      "howTo": "Enter new page order like 3, 1, 2, 4"
+    },
+    "compress-pdf": {
+      "title": "Compress PDF",
+      "description": "Reduce PDF file size while maintaining quality",
+      "howTo": "Adjust quality slider and compress"
+    },
+    "pdf-to-jpg": {
+      "title": "PDF to JPG",
+      "description": "Convert PDF pages to JPG images",
+      "howTo": "Upload PDF and download images"
+    },
+    "jpg-to-pdf": {
+      "title": "JPG to PDF",
+      "description": "Convert JPG/PNG images to a PDF document",
+      "howTo": "Upload images and combine into PDF"
+    },
+    "annotate-pdf": {
+      "title": "Annotate PDF",
+      "description": "Highlight, underline, strikethrough, and comment",
+      "howTo": "Select annotation tool and click on the document"
+    },
+    "edit-pdf": {
+      "title": "PDF bewerken",
+      "description": "Tekst bewerken, tekenen, afbeeldingen toevoegen en PDF markeren",
+      "howTo": "Upload een PDF, bewerk de inhoud en download"
+    },
+    "pdf-to-word": {
+      "title": "PDF to Word",
+      "description": "Convert PDF to editable Word document",
+      "howTo": "Upload PDF for high-quality server conversion"
+    },
+    "pdf-to-excel": {
+      "title": "PDF to Excel",
+      "description": "Convert PDF tables to Excel spreadsheet",
+      "howTo": "Upload PDF for server conversion"
+    },
+    "pdf-to-ppt": {
+      "title": "PDF to PowerPoint",
+      "description": "Convert PDF to PowerPoint presentation",
+      "howTo": "Upload PDF for server conversion"
+    },
+    "word-to-pdf": {
+      "title": "Word to PDF",
+      "description": "Convert Word documents to PDF",
+      "howTo": "Upload DOCX file for conversion"
+    },
+    "ocr-pdf": {
+      "title": "OCR PDF",
+      "description": "Make scanned PDFs searchable with OCR",
+      "howTo": "Upload scanned PDF for text recognition"
+    },
+    "form-pdf": {
+      "title": "PDF Forms",
+      "description": "Create and fill PDF form fields",
+      "howTo": "Add text fields, checkboxes, and dropdowns"
+    },
+    "sign-pdf": {
+      "title": "Sign PDF",
+      "description": "Add your signature to PDF documents",
+      "howTo": "Draw or upload your signature"
+    },
+    "watermark-pdf": {
+      "title": "Watermark PDF",
+      "description": "Add text watermark to PDF pages",
+      "howTo": "Enter watermark text and apply"
+    },
+    "compare-pdf": {
+      "title": "Compare PDFs",
+      "description": "Visually compare two PDF documents",
+      "howTo": "Upload two PDFs to compare"
+    },
+    "extract-images": {
+      "title": "Extract Images",
+      "description": "Extract all images from a PDF",
+      "howTo": "Upload PDF and download extracted images"
+    },
+    "page-numbers": {
+      "title": "Add Page Numbers",
+      "description": "Add page numbers to your PDF",
+      "howTo": "Upload PDF and add numbers"
+    },
+    "flatten-pdf": {
+      "title": "Flatten PDF",
+      "description": "Make annotations permanent in the PDF",
+      "howTo": "Upload PDF to flatten"
+    },
+    "remove-metadata": {
+      "title": "Remove Metadata",
+      "description": "Strip hidden metadata from PDF for privacy",
+      "howTo": "Upload PDF to remove metadata"
+    },
+    "password-protect": {
+      "title": "Password Protect PDF",
+      "description": "Encrypt PDF with a password",
+      "howTo": "Enter password and protect"
+    },
+    "batch-process": {
+      "title": "Batch Processing",
+      "description": "Process hundreds of PDFs at once",
+      "howTo": "Select operation and upload multiple files"
+    },
+    "chat-pdf": {
+      "title": "Chat with PDF",
+      "description": "Ask questions about your document with AI",
+      "howTo": "Upload PDF and start chatting"
+    },
+    "template-pdf": {
+      "title": "AI Templates",
+      "description": "Generate PDF documents from prompts",
+      "howTo": "Describe the document you need"
+    },
+    "redact-pdf": {
+      "title": "Smart Redaction",
+      "description": "Automatically detect and redact PII",
+      "howTo": "Upload PDF for AI-powered redaction"
+    },
+    "collaborate": {
+      "title": "Collaborate",
+      "description": "Real-time multi-user PDF editing",
+      "howTo": "Share link and edit together"
+    }
+  },
+  "pricing": {
+    "title": "Simple, honest pricing",
+    "free": "Free",
+    "freeDesc": "3 documents to try everything",
+    "lifetime": "€1 Lifetime",
+    "lifetimeDesc": "Unlimited documents forever. No subscription.",
+    "features": "What's included",
+    "feature1": "All browser-based PDF tools",
+    "feature2": "50 server conversions per day",
+    "feature3": "20 AI operations per month",
+    "feature4": "No account fees, ever"
+  },
+  "paywall": {
+    "title": "You've used your 3 free documents",
+    "description": "Unlock unlimited access for just €1 — pay once, use forever.",
+    "cta": "Unlock for €1"
+  },
+  "dashboard": {
+    "title": "Your Dashboard",
+    "documentsUsed": "Documents used",
+    "status": "Account status",
+    "paid": "Lifetime access",
+    "free": "Free tier",
+    "recentActivity": "Recent activity"
+  },
+  "blog": {
+    "title": "PDF Tips & Guides",
+    "readMore": "Read more"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "PdfFlow is built with privacy first. Basic tools process files entirely in your browser."
+  },
+  "faq": {
+    "q1": "Are my files uploaded to your servers?",
+    "a1": "For basic tools like merge, split, and compress, files are processed entirely in your browser and never uploaded.",
+    "q2": "What does €1 lifetime include?",
+    "a2": "Unlimited use of all browser tools plus fair-use server conversions and AI features.",
+    "q3": "Is there a subscription?",
+    "a3": "No. Pay €1 once and use PdfFlow forever."
+  }
+}

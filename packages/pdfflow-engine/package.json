@@ -1,0 +1,68 @@
+{
+  "name": "pdfflow-engine",
+  "version": "0.1.0",
+  "description": "From-scratch PDF text extract, interpret, and edit engine — parse COS objects, recover text spans, apply native incremental updates with pdf-lib overlay fallback",
+  "author": "Alexandru Bucur <bucur.alexandru0106@gmail.com>",
+  "license": "AGPL-3.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "import": "./dist/node.js",
+      "require": "./dist/node.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "pdf-lib": "^1.17.1",
+    "zod": "^4.0.0"
+  },
+  "optionalDependencies": {
+    "@napi-rs/canvas": "^1.0.0",
+    "pdfium-native": "^1.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@pdf-lib/fontkit": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "pdf",
+    "pdf-editor",
+    "pdf-parse",
+    "text-extract",
+    "cos",
+    "incremental-update"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ennkaos/pdfFlow-Engine.git",
+    "directory": "packages/pdfflow-engine"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5"
+  }
+}

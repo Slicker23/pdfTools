@@ -1,0 +1,17 @@
+[Unit]
+Description=PdfFlow background job worker (LibreOffice, OCR, batch)
+After=network.target redis.service postgresql.service
+Wants=redis.service
+
+[Service]
+Type=simple
+User=alex
+Group=alex
+WorkingDirectory=/home/alex/Desktop/pdfTools
+EnvironmentFile=/etc/pdfflow/pdftools-worker.env
+ExecStart=/usr/local/bin/pdfflow-worker
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

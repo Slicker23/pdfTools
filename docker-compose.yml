@@ -1,0 +1,126 @@
+name: pdfflow
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-pdfflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-pdfflow}
+      POSTGRES_DB: ${POSTGRES_DB:-pdfflow}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-pdfflow} -d ${POSTGRES_DB:-pdfflow}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  ollama:
+    image: ollama/ollama
+    restart: unless-stopped
+    # No host port published: web/worker reach it in-network as ollama:11434.
+    # (Publishing 11434 would clash with a host Ollama install.) To expose it on
+    # the host, add:  ports: ["11435:11434"]
+    volumes:
+      - ollama:/root/.ollama
+    healthcheck:
+      test: ["CMD-SHELL", "ollama list || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+  # One-shot: pull the configured model into the ollama volume on first start.
+  ollama-init:
+    image: ollama/ollama
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      OLLAMA_HOST: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2}
+    entrypoint: ["/bin/sh", "-c", "ollama pull \"$${OLLAMA_MODEL}\""]
+    restart: "no"
+
+  # One-shot: apply the Drizzle schema before the app starts.
+  migrate:
+    build:
+      context: .
+      target: web
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env.docker
+    command: ["npx", "drizzle-kit", "push"]
+    restart: "no"
+
+  web:
+    build:
+      context: .
+      target: web
+      args:
+        NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-http://localhost:3000}
+        NEXT_PUBLIC_YJS_WS_URL: ${NEXT_PUBLIC_YJS_WS_URL:-ws://localhost:1234}
+    restart: unless-stopped
+    ports:
+      - "${WEB_HOST_PORT:-3000}:3000"
+    env_file:
+      - .env.docker
+    volumes:
+      - jobs:/data/jobs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+
+  worker:
+    build:
+      context: .
+      target: worker
+    restart: unless-stopped
+    env_file:
+      - .env.docker
+    volumes:
+      - jobs:/data/jobs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      ollama:
+        condition: service_healthy
+
+  # Optional real-time collaboration server (Yjs). Enable with:
+  #   docker compose --profile collab up -d
+  collab:
+    image: node:22-bookworm-slim
+    profiles: ["collab"]
+    restart: unless-stopped
+    ports:
+      - "1234:1234"
+    environment:
+      HOST: 0.0.0.0
+      PORT: "1234"
+    command: ["npx", "-y", "y-websocket-server@latest"]
+
+volumes:
+  pgdata:
+  redis:
+  ollama:
+  jobs:

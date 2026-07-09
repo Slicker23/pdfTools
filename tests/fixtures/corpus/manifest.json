@@ -1,0 +1,63 @@
+[
+  {
+    "file": "multi_classic.pdf",
+    "pages": 4,
+    "encrypted": false
+  },
+  {
+    "file": "multi_objstm.pdf",
+    "pages": 4,
+    "encrypted": false
+  },
+  {
+    "file": "multi_linearized.pdf",
+    "pages": 4,
+    "encrypted": false
+  },
+  {
+    "file": "multi_uncompressed.pdf",
+    "pages": 4,
+    "encrypted": false
+  },
+  {
+    "file": "single_large.pdf",
+    "pages": 1,
+    "encrypted": false
+  },
+  {
+    "file": "enc_rc4_40.pdf",
+    "pages": 4,
+    "encrypted": true
+  },
+  {
+    "file": "enc_rc4_128.pdf",
+    "pages": 4,
+    "encrypted": true
+  },
+  {
+    "file": "enc_aes128.pdf",
+    "pages": 4,
+    "encrypted": true
+  },
+  {
+    "file": "enc_aes128_nometa.pdf",
+    "pages": 4,
+    "encrypted": true
+  },
+  {
+    "file": "enc_aes256.pdf",
+    "pages": 4,
+    "encrypted": true
+  },
+  {
+    "file": "enc_aes256_userpw.pdf",
+    "pages": 4,
+    "encrypted": true,
+    "password": "ownerpw"
+  },
+  {
+    "file": "multi_ghostscript.pdf",
+    "pages": 4,
+    "encrypted": false
+  }
+]

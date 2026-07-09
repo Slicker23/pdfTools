@@ -1,0 +1,30 @@
+# Dependencies / build output (reinstalled or rebuilt inside the image)
+node_modules
+.next
+out
+
+# Version control & IDE
+.git
+.gitignore
+.vscode
+.idea
+.cursor
+
+# Env files — provided at runtime via compose env_file, never baked into images
+.env
+.env.*
+
+# Local job/temp storage
+/var/lib/pdfflow
+
+# Python sidecar artifacts
+**/__pycache__
+*.pyc
+services/pdf-engine/.venv
+
+# Misc noise
+terminals
+*.log
+.DS_Store
+.pdf-engine-smoke-output.pdf
+npm-debug.log*

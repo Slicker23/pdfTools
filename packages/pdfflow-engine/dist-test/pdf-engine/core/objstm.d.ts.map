@@ -1,0 +1,1 @@
+{"version":3,"file":"objstm.d.ts","sourceRoot":"","sources":["../../../../../src/lib/pdf-engine/core/objstm.ts"],"names":[],"mappings":"AASA,OAAO,KAAK,EAAE,SAAS,EAAE,MAAM,aAAa,CAAC;AAE7C,MAAM,WAAW,YAAY;IAC3B,GAAG,EAAE,MAAM,CAAC;IACZ,GAAG,EAAE,SAAS,CAAC;CAChB;AAED;;;;;GAKG;AACH,wBAAgB,iBAAiB,CAAC,OAAO,EAAE,UAAU,EAAE,CAAC,EAAE,MAAM,EAAE,KAAK,EAAE,MAAM,GAAG,YAAY,EAAE,CAsB/F"}

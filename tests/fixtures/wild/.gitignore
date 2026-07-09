@@ -1,0 +1,5 @@
+# Keep the directory (and its README) but never commit real-world sample PDFs,
+# which may be large or contain sensitive content.
+*.pdf
+!.gitignore
+!README.md
