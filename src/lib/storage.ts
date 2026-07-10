@@ -24,7 +24,7 @@ const localRoot = process.env.LOCAL_STORAGE_PATH ?? "/var/lib/pdfflow/jobs";
 
 function localPath(key: string): string {
   const safe = key.replace(/\.\./g, "").replace(/^\/+/, "");
-  return path.join(localRoot, safe);
+  return path.join(/* turbopackIgnore: true */ localRoot, safe);
 }
 
 async function ensureDir(filePath: string): Promise<void> {

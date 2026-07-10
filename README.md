@@ -181,10 +181,13 @@ See the [full engine documentation](./packages/pdfflow-engine/README.md) for ins
 
 ## Deployment
 
-- **Frontend:** Vercel
-- **Database:** Neon or Supabase (EU region)
-- **Workers:** Railway/Fly with LibreOffice (Phase 4+)
-- **Storage:** Cloudflare R2 (EU)
+**Full step-by-step plan:** [docs/DEPLOY.md](docs/DEPLOY.md) — Oracle free VM + Docker + Cloudflare for `free-pdf-flow.com`.
+
+Quick reference:
+
+- **All-in-one (recommended, $0):** Oracle Always Free ARM VM + `npm run docker:up` + Caddy + Cloudflare DNS
+- **Database / Redis / Ollama:** run on the same VM via Docker Compose (not separate paid services)
+- **Stripe / Google:** production URLs use `https://free-pdf-flow.com` — see [docs/STRIPE.md](docs/STRIPE.md) and [docs/GOOGLE_AUTH.md](docs/GOOGLE_AUTH.md)
 
 ## SEO
 

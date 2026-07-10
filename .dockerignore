@@ -22,6 +22,9 @@ out
 *.pyc
 services/pdf-engine/.venv
 
+# Standalone engine repo (separate git; not part of app image)
+pdfFlow-Engine
+
 # Misc noise
 terminals
 *.log

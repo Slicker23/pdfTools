@@ -1,0 +1,11 @@
+# Install on the Oracle VM (host), not inside Docker.
+# Copy to /etc/caddy/Caddyfile then: sudo systemctl reload caddy
+#
+# Prerequisites:
+# - DNS A record: free-pdf-flow.com → this server's public IP
+# - docker compose web listening on 127.0.0.1:3000
+# - Cloudflare SSL/TLS mode: Full (strict) if using Cloudflare proxy
+
+free-pdf-flow.com, www.free-pdf-flow.com {
+	reverse_proxy 127.0.0.1:3000
+}

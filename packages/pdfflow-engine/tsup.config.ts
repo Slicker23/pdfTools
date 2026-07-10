@@ -6,6 +6,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const src = path.resolve(here, "../../src");
 
 export default defineConfig({
+  tsconfig: "tsconfig.build.json",
   entry: {
     index: path.join(src, "lib/pdf-engine/public.ts"),
     node: path.join(src, "lib/pdf-engine/public/node.ts"),
@@ -13,7 +14,6 @@ export default defineConfig({
   outDir: "dist",
   format: ["esm", "cjs"],
   dts: {
-    tsconfig: "tsconfig.build.json",
     resolve: true,
   },
   splitting: false,
